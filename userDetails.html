@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Details</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @font-face {
+        font-family: "CustomLight";
+        src: url("./font/SF-Pro-Text-Ultralight.otf") format("opentype");
+        font-weight: 100;
+      }
+
+      @font-face {
+        font-family: "CustomLight";
+        src: url("./font/SF-Pro-Text-Thin.otf") format("opentype");
+        font-weight: 200;
+      }
+      @font-face {
+        font-family: "CustomLight";
+        src: url("./font/SF-Pro-Text-Light.otf") format("opentype");
+        font-weight: 300;
+      }
+      @font-face {
+        font-family: "CustomLight";
+        src: url("./font/SF-Pro-Text-Regular.otf") format("opentype");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: "CustomLight";
+        src: url("./font/SF-Pro-Text-Medium.otf") format("opentype");
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: "CustomLight";
+        src: url("./font/SF-Pro-Text-Semibold.otf") format("opentype");
+        font-weight: 600;
+      }
+      @font-face {
+        font-family: "CustomLight";
+        src: url("./font/SF-Pro-Text-Bold.otf") format("opentype");
+        font-weight: 700;
+      }
+      @font-face {
+        font-family: "CustomLight";
+        src: url("./font/SF-Pro-Text-Heavy.otf") format("opentype");
+        font-weight: 800;
+      }
+      @font-face {
+        font-family: "CustomLight";
+        src: url("./font/SF-Pro-Text-Black.otf") format("opentype");
+        font-weight: 900;
+      }
+
+      * {
+        font-family: "CustomLight", Arial, Helvetica, sans-serif;
+      }
+      .custom-color {
+        color: #309fed;
+      }
+
+      .custom-info {
+        color: rgba(0, 0, 0, 0.5);
+        letter-spacing: 0.1em;
+        font-weight: 100;
+        font-size: 14px;
+      }
+      .custom-subcolor {
+        color: rgba(25, 29, 35, 0.7);
+        font-weight: 400;
+        letter-spacing: -0.6%;
+        font-size: 12px;
+      }
+      .custom-details-bank {
+        color: rgba(25, 29, 35, 0.4);
+        font-weight: 500;
+        font-size: 12px;
+        margin-bottom: 1px;
+      }
+      .custom-details {
+        color: rgba(25, 29, 35, 0.4);
+        font-weight: 500;
+        font-size: 12px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+      }
+      .custom-cus-data {
+        color: rgba(25, 29, 35, 1);
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .custom-subs {
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .custom-icons {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.01cm;
+      }
+      .custom-date {
+        font-size: 13px;
+        font-weight: 600;
+        padding-left: 1.5ch;
+      }
+      .custom-sub {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .custom-cash {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .custom-btn {
+        background-color: #309fed;
+        color: white;
+      }
+      .custom-log-btn {
+        background-color: white;
+        color: #309fed;
+        border: 2px solid #309fed;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+      }
+      .custom-text {
+        color: rgba(25, 29, 35, 0.4);
+        font-size: 11px;
+        font-weight: 500;
+        padding-left: 1.5ch;
+      }
+      .custom-live {
+        margin-left: 1.5ch;
+        color: rgb(37, 138, 37);
+        background-color: rgb(193, 236, 193);
+        display: inline-block;
+        font-size: 13px;
+      }
+      .custom-recv {
+        font-size: 13px;
+        font-weight: 400;
+      }
+
+      .btn-hover-text {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid transparent;
+      }
+
+      .btn-hover-text:hover {
+        color: #309fed;
+      }
+      .btn-hover-text:focus,
+      .btn-hover-text:active {
+        color: #309fed;
+        border-bottom-color: #309fed;
+      }
+    </style>
+  </head>
+  <body class="">
+    <div class="px-1">
+      <div class="px-4">
+        <div
+          class="d-flex w-100 align-items-center justify-content-between pt-2 py-2 border-bottom border-start"
+        >
+          <div class="">
+            <label class="px-2 fw-bold text-18 text-uppercase"
+              >Mirai Life Insurence
+            </label>
+          </div>
+          <div>
+            <button class="btn custom-btn px-4 py-1.5 mx-2 rounded">
+              <div class="d-flex">
+                <label class="px-1">+ Add new</label>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="border-bottom border-start border-1 border-gray d-flex gap-4 px-2"
+        >
+          <div class="btn-hover-text">
+            <h6 class="custom-icons">OVERVIEW</h6>
+          </div>
+          <div class="btn-hover-text">
+            <h6 class="custom-icons">INVOICE</h6>
+          </div>
+          <div class="btn-hover-text">
+            <h6 class="custom-icons">PAYMENTS</h6>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="h-100 w-[373px] border border-top-0" style="width: 374px">
+            <div class="d-grid place-items-center py-4 border-bottom">
+              <div
+                class="d-flex justify-content-center flex-column align-items-center"
+              >
+                <label
+                  class="text-center"
+                  style="font-weight: 600; font-size: 18px"
+                  >Alish</label
+                >
+                <label
+                  class="text-center pb-2"
+                  style="
+                    font-weight: 400;
+                    font-size: 15px;
+                    color: rgba(25, 29, 35, 1);
+                  "
+                  >Alish Acharya</label
+                >
+                <span class="me-3 custom-live px-2 rounded">status</span>
+              </div>
+            </div>
+            <div
+              class="d-flex justify-content-center py-3 border-bottom"
+              style="gap: 1rem"
+            >
+              <div>
+                <img src="./whatsapp.svg" alt="" height="25" width="25" />
+              </div>
+              <div>
+                <img src="./fb.svg" alt="" height="25" width="25" />
+              </div>
+              <div>
+                <img src="./line.svg" alt="" height="25" width="25" />
+              </div>
+            </div>
+
+            <div class="p-4 mb-1 border-bottom">
+              <div>
+                <label class="custom-info pb-3 pt-0" style="font-weight: 700">
+                  PERSONAL INFO
+                </label>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="mb-1">
+                  <svg
+                    width="11"
+                    height="9"
+                    viewBox="0 0 11 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_0_2402)">
+                      <path
+                        d="M9.41366 0H1.59788C1.38919 0 1.18253 0.0428169 0.989713 0.126002C0.796901 0.209188 0.621713 0.331118 0.474141 0.484825C0.326569 0.638531 0.209506 0.821002 0.12964 1.02183C0.049775 1.22266 0.00866699 1.43791 0.00866699 1.65528V7.34774C0.00866699 7.56511 0.049775 7.78036 0.12964 7.98119C0.209506 8.18202 0.326569 8.36449 0.474141 8.5182C0.621713 8.6719 0.796901 8.79383 0.989713 8.87702C1.18253 8.96021 1.38919 9.00302 1.59788 9.00302H9.41366C9.83491 9.00222 10.2387 8.82757 10.5366 8.51732C10.8344 8.20707 11.0021 7.7865 11.0029 7.34774V1.65528C11.0021 1.21652 10.8344 0.795951 10.5366 0.485699C10.2387 0.175447 9.83491 0.000797026 9.41366 0ZM9.41366 0.789948C9.47707 0.79035 9.54022 0.79845 9.60183 0.814074L6.30762 4.71558C6.20764 4.83415 6.08454 4.92913 5.94652 4.99421C5.80849 5.05928 5.65872 5.09295 5.50722 5.09295C5.35571 5.09295 5.20596 5.05928 5.06794 4.99421C4.92991 4.92913 4.8068 4.83415 4.70682 4.71558L1.40683 0.814074C1.4684 0.798256 1.53157 0.790154 1.59499 0.789948H9.41366ZM10.2416 7.34774C10.2416 7.57644 10.1543 7.79577 9.99908 7.95749C9.84382 8.1192 9.63323 8.21006 9.41366 8.21006H1.59788C1.37805 8.21006 1.16717 8.1193 1.01144 7.95767C0.855725 7.79604 0.767853 7.57671 0.767087 7.34774V1.65528C0.767239 1.54243 0.788886 1.43071 0.830771 1.32663L4.13946 5.24623C4.31112 5.44799 4.52192 5.60952 4.75795 5.72014C4.99398 5.83076 5.24985 5.88796 5.50867 5.88796C5.76749 5.88796 6.02337 5.83076 6.2594 5.72014C6.49543 5.60952 6.70621 5.44799 6.87787 5.24623L10.1895 1.32663C10.2304 1.4309 10.2511 1.54262 10.2502 1.65528L10.2416 7.34774Z"
+                        fill="#309FED"
+                        stroke="#309FED"
+                        stroke-width="0.3"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_0_2402">
+                        <rect width="11" height="9" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div
+                  class="custom-color"
+                  style="font-weight: 400; font-size: 13px"
+                >
+                  Matrika@gmail.com
+                </div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="mb-1">
+                  <svg
+                    width="9"
+                    height="13"
+                    viewBox="0 0 9 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_0_2404)">
+                      <path
+                        d="M7.10755 0H1.9025C1.39762 0.000896838 0.913714 0.20424 0.557024 0.565395C0.200333 0.926549 -7.79711e-07 1.416 0 1.9263V11.0669C-7.79711e-07 11.5772 0.200333 12.0667 0.557024 12.4278C0.913714 12.789 1.39762 12.9923 1.9025 12.9932H7.10755C7.61243 12.9923 8.09633 12.789 8.45302 12.4278C8.80971 12.0667 9.01005 11.5772 9.01005 11.0669V1.9263C9.01005 1.416 8.80971 0.926549 8.45302 0.565395C8.09633 0.20424 7.61243 0.000896838 7.10755 0ZM1.91254 0.890361H7.10755C7.37911 0.891254 7.63929 1.00068 7.83132 1.19477C8.02334 1.38885 8.13161 1.65182 8.13249 1.9263V5.5927V9.25911H0.877567V1.9263C0.877567 1.79026 0.904072 1.65555 0.955579 1.52986C1.00709 1.40418 1.08259 1.28998 1.17776 1.19378C1.27293 1.09759 1.38592 1.02128 1.51027 0.969221C1.63462 0.91716 1.7679 0.890361 1.9025 0.890361H1.91254ZM7.10755 12.1062H1.9025C1.63412 12.1063 1.37642 11.9999 1.18477 11.81C0.993126 11.6201 0.88283 11.3618 0.877567 11.0906V10.1596H8.11239V11.0906C8.10642 11.3581 7.99865 11.6129 7.81149 11.8021C7.62432 11.9913 7.37218 12.1002 7.10755 12.1062Z"
+                        fill="#309FED"
+                        stroke="#309FED"
+                        stroke-width="0.3"
+                      />
+                      <path
+                        d="M4.38108 2.16667C4.45133 2.16659 4.51995 2.14525 4.57809 2.10539C4.63624 2.06553 4.68124 2.00898 4.7073 1.94303C4.73335 1.87709 4.73927 1.80477 4.72429 1.73539C4.7093 1.66601 4.67411 1.60277 4.62323 1.55379C4.57236 1.50482 4.50814 1.47237 4.43885 1.46063C4.36957 1.44889 4.29838 1.45839 4.23448 1.4879C4.17058 1.51742 4.11691 1.56561 4.08036 1.62625C4.0438 1.68689 4.02605 1.7572 4.02939 1.82813C4.02933 1.87405 4.03853 1.9195 4.0564 1.96172C4.07427 2.00393 4.10045 2.04204 4.13335 2.0737C4.16624 2.10537 4.20516 2.12994 4.24775 2.14593C4.29034 2.16191 4.33571 2.16897 4.38108 2.16667Z"
+                        fill="#309FED"
+                      />
+                      <path
+                        d="M4.38109 10.6979C4.31021 10.6946 4.23999 10.713 4.17966 10.7507C4.11932 10.7885 4.0717 10.8438 4.04303 10.9094C4.01436 10.975 4.00598 11.0478 4.01901 11.1183C4.03204 11.1888 4.06586 11.2536 4.11604 11.3043C4.16621 11.3551 4.23038 11.3892 4.30013 11.4024C4.36988 11.4156 4.44193 11.4071 4.50683 11.3781C4.57174 11.3492 4.62646 11.301 4.6638 11.24C4.70113 11.1791 4.71933 11.1081 4.71603 11.0365C4.71603 10.9467 4.68074 10.8606 4.61792 10.7971C4.55511 10.7336 4.46992 10.6979 4.38109 10.6979Z"
+                        fill="#309FED"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_0_2404">
+                        <rect width="9" height="13" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div
+                  class="custom-color"
+                  style="font-weight: 400; font-size: 13px"
+                >
+                  contact
+                </div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="mb-1">
+                  <svg
+                    width="12"
+                    height="14"
+                    viewBox="0 0 12 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.01193 13.2094C5.94819 13.2112 5.88479 13.1997 5.826 13.1757C5.7672 13.1516 5.71439 13.1156 5.6711 13.07C5.48023 12.8708 1.0017 8.14637 1.0017 5.55673C0.984276 4.90665 1.10067 4.25976 1.34402 3.65419C1.58737 3.04863 1.95276 2.49667 2.41862 2.03087C2.88448 1.56507 3.44138 1.19487 4.05648 0.94209C4.67157 0.689313 5.33239 0.559082 5.99999 0.559082C6.66758 0.559082 7.32843 0.689313 7.94352 0.94209C8.55862 1.19487 9.11552 1.56507 9.58138 2.03087C10.0472 2.49667 10.4126 3.04863 10.656 3.65419C10.8993 4.25976 11.0157 4.90665 10.9983 5.55673C10.9983 8.14637 6.51635 12.8608 6.32549 13.07C6.28569 13.1128 6.23736 13.1472 6.18345 13.1712C6.12954 13.1951 6.07118 13.2082 6.01193 13.2094ZM6.01193 1.55941C4.92858 1.56378 3.89088 1.98493 3.12483 2.73114C2.35878 3.47735 1.92643 4.48817 1.92194 5.54346C1.92194 7.25992 4.6486 10.5866 6.01193 12.1138C7.40593 10.5866 10.1019 7.25992 10.1019 5.54346C10.0974 4.48817 9.66506 3.47735 8.89901 2.73114C8.13296 1.98493 7.09528 1.56378 6.01193 1.55941Z"
+                      fill="#309FED"
+                      stroke="#309FED"
+                      stroke-width="0.3"
+                    />
+                    <path
+                      d="M6.00303 7.83887C5.60721 7.83946 5.22011 7.72259 4.89075 7.50306C4.56138 7.28353 4.30457 6.97121 4.15282 6.60563C4.00107 6.24006 3.96121 5.83767 4.03828 5.44943C4.11536 5.06118 4.3059 4.70454 4.58579 4.42466C4.86568 4.14477 5.22231 3.95422 5.61056 3.87715C5.9988 3.80008 6.40118 3.83994 6.76675 3.99169C7.13233 4.14344 7.44467 4.40025 7.6642 4.72961C7.88374 5.05897 8.0006 5.44607 8 5.84189C7.9992 6.37127 7.78854 6.87874 7.41421 7.25308C7.03987 7.62741 6.53241 7.83806 6.00303 7.83887ZM6.00303 4.63765C5.76366 4.63765 5.52966 4.70864 5.33062 4.84163C5.13159 4.97461 4.97646 5.16363 4.88485 5.38478C4.79325 5.60593 4.76929 5.84928 4.81599 6.08405C4.86269 6.31883 4.97796 6.53448 5.14722 6.70374C5.31649 6.873 5.53213 6.98828 5.7669 7.03497C6.00167 7.08167 6.24502 7.0577 6.46618 6.9661C6.68733 6.8745 6.87635 6.71937 7.00934 6.52034C7.14233 6.32131 7.21332 6.08731 7.21332 5.84794C7.21013 5.52905 7.0812 5.22432 6.85457 4.99996C6.62794 4.77559 6.32193 4.64974 6.00303 4.64976V4.63765Z"
+                      fill="#309FED"
+                      stroke="#309FED"
+                      stroke-width="0.3"
+                    />
+                  </svg>
+                </div>
+                <div style="font-weight: 400; font-size: 13px">location</div>
+              </div>
+            </div>
+            <div class="p-4 border-bottom">
+              <div>
+                <label class="custom-info pb-2 pt-0" style="font-weight: 700">
+                  ADDITIONAL INFO
+                </label>
+              </div>
+              <div class="custom-details-bank p-1">Smartpit No:</div>
+              <div class="custom-cus-data ps-1">149839294</div>
+              <div class="custom-details-bank p-1">Bank Auto (Telecom):</div>
+              <div class="custom-cus-data ps-1">8342349</div>
+              <div class="custom-details-bank p-1">Bank Auto (Veritrans):</div>
+              <div class="custom-cus-data ps-1">2342773</div>
+            </div>
+            <div class="p-4 border-bottom">
+              <div>
+                <label class="custom-info pb-3" style="font-weight: 700"
+                  >OTHER DETAILS</label
+                >
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <p class="custom-details">Customer Type</p>
+                  <p class="custom-cus-data">Individual</p>
+                </div>
+                <div class="col-6">
+                  <p class="custom-details">Date of Birth</p>
+                  <p class="custom-cus-data">6252</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <p class="custom-details">Gender</p>
+                  <p class="custom-cus-data">Male</p>
+                </div>
+                <div class="col-6">
+                  <p class="custom-details">Company</p>
+                  <p class="custom-cus-data">Ncell</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <p class="custom-details">Profession</p>
+                  <p class="custom-cus-data">-</p>
+                </div>
+                <div class="col-6">
+                  <p class="custom-details">Registration Date</p>
+                  <p class="custom-cus-data">-</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <p class="custom-details">Emergency Name</p>
+                  <p class="custom-cus-data">-</p>
+                </div>
+                <div class="col-6">
+                  <p class="custom-details">Emergency Phone</p>
+                  <p class="custom-cus-data">-</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <p class="custom-details">ZipCode</p>
+                  <p class="custom-cus-data">-</p>
+                </div>
+                <div class="col-6">
+                  <p class="custom-details">Province</p>
+                  <p class="custom-cus-data">-</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <p class="custom-details">Nationality</p>
+                  <p class="custom-cus-data">-</p>
+                </div>
+                <div class="col-6">
+                  <p class="custom-details">Residence Card No</p>
+                  <p class="custom-cus-data">-</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <p class="custom-details">Residence Card Front</p>
+                  <p class="custom-cus-data">-</p>
+                </div>
+                <div class="col-6">
+                  <p class="custom-details">Residence Card Back</p>
+                  <p class="custom-cus-data">-</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <p class="custom-details">Agent</p>
+                  <p class="custom-cus-data">-</p>
+                </div>
+                <div class="col-6">
+                  <p class="custom-details">Referer</p>
+                  <p class="custom-cus-data">-</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="h-100 w-100">
+            <div class="ps-4 w-100 d-flex flex-column">
+              <div class="gap-0 py-4 d-flex">
+                <div class="border">
+                  <div class="pt-3 pb-2">
+                    <div class="d-flex px-4">
+                      <div>
+                        <img
+                          src="./receivable.svg"
+                          alt=""
+                          height="40"
+                          width="40"
+                        />
+                      </div>
+                      <div class="d-flex flex-column mx-3">
+                        <label class="custom-recv">receivables</label>
+                        <p class="custom-cash">¥ 0</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border border-start-0 border-end-0">
+                  <div class="pt-3 pb-2">
+                    <div class="d-flex py-6 px-4">
+                      <div>
+                        <img
+                          src="./excess_credit.svg"
+                          alt=""
+                          height="40"
+                          width="40"
+                        />
+                      </div>
+                      <div class="d-flex flex-column mx-3">
+                        <label class="custom-recv">excess credits</label>
+                        <p class="custom-cash">¥ 0</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border">
+                  <div class="pt-3 pb-2">
+                    <div class="d-flex py-6 px-4">
+                      <div>
+                        <img
+                          src="./deposit.svg"
+                          alt=""
+                          height="40"
+                          width="40"
+                        />
+                      </div>
+                      <div class="d-flex flex-column mx-3">
+                        <label class="custom-recv">deposit</label>
+                        <p class="custom-cash">¥ 0</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <label class="py-2 custom-sub border-bottom">
+                Subscriptions
+              </label>
+            </div>
+            <div>
+              <div class="d-flex pt-3 justify-content-between">
+                <div class="">
+                  <p class="px-4 mb-1 custom-subs">
+                    48GB 56Month SubAtomic Plans
+                  </p>
+                  <p class="custom-subcolor px-4">
+                    Subscription ID: SUB-00000000187 | Subscription #:
+                    SUB-000000187
+                  </p>
+                </div>
+                <div class="">
+                  <button class="custom-log-btn">Call Logs</button>
+                  <button class="custom-log-btn">Data Logs</button>
+                </div>
+              </div>
+              <div class="ps-4">
+                <div class="d-flex border-bottom pb-4" style="width: 100%">
+                  <div class="border w-25">
+                    <p class="custom-text mt-3 mb-1">Next billing Date</p>
+                    <p class="custom-date">20 May, 2023</p>
+                  </div>
+                  <div class="border w-25 border-start-0 border-end-0">
+                    <p class="custom-text mt-3 mb-1">Next billing Date</p>
+                    <p class="custom-date">20 May, 2023</p>
+                  </div>
+                  <div class="border w-25 border-end-0">
+                    <p class="custom-text mt-3 mb-1">Price</p>
+                    <div class="d-flex">
+                      <label class="custom-date d-block"
+                        >¥ 568
+                        <p class="custom-text d-inline ps-0">/month</p></label
+                      >
+                    </div>
+                  </div>
+                  <div class="border w-25">
+                    <p class="text-13 custom-text mt-3 mb-1">Status</p>
+                    <p class="custom-live px-2 rounded">live</p>
+                  </div>
+                  <div class="border w-25 border-start-0">
+                    <p class="text-13 custom-text mt-3 mb-1">Remaining Date</p>
+                    <p class="custom-date">
+                      20 MB
+                      <svg
+                        width="17"
+                        height="17"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ps-1"
+                      >
+                        <path
+                          d="M4.2246 5.03011L1.05118 5.82752C0.659069 5.92582 0.270604 5.65715 0.241003 5.26706L0.000948797 2.10796C-0.019326 1.8432 0.289662 1.67557 0.513496 1.83027L1.45465 2.48121C3.88804 -0.286238 8.15345 -0.83299 11.2636 1.31916C12.4915 2.16827 13.3649 3.31739 13.8539 4.58949C13.9881 4.93885 13.7821 5.32424 13.4083 5.41706L12.3025 5.69201C11.9838 5.77112 11.6569 5.60623 11.5353 5.31053C11.2028 4.50176 10.6343 3.77289 9.84762 3.22888C7.82987 1.83262 5.08344 2.13929 3.44199 3.85631L4.33246 4.47239C4.55629 4.62709 4.49142 4.96352 4.22541 5.0305L4.2246 5.03011ZM12.948 8.17197L9.77463 8.96939C9.50822 9.03636 9.44374 9.37279 9.66758 9.5275L10.558 10.1436C8.91619 11.8606 6.17017 12.1673 4.15242 10.771C3.36576 10.227 2.79685 9.49812 2.46474 8.68935C2.3431 8.39365 2.01667 8.22837 1.69755 8.30788L0.591757 8.58282C0.217889 8.67564 0.011897 9.06103 0.146116 9.41039C0.635145 10.6821 1.50858 11.8312 2.73643 12.6807C5.84658 14.8329 10.112 14.2865 12.5454 11.5187L13.4865 12.1696C13.71 12.3243 14.019 12.1571 13.9991 11.8919L13.759 8.73283C13.7294 8.34274 13.341 8.07367 12.9489 8.17237L12.948 8.17197Z"
+                          fill="#309FED"
+                        />
+                      </svg>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
